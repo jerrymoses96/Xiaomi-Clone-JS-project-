@@ -117,3 +117,31 @@ pauseButton.addEventListener("click", function () {
     pauseIcon.classList.add("fa-pause");
   }
 });
+
+// dropdown function
+
+// function dropdown() {
+//   var x = document.getElementById("dropdown1-content");
+//   console.log(x);
+//   if (x.style.display === "none") {
+//     console.log("r");
+//     x.style.display = "block";
+//   } else {
+//     console.log("d");
+//     x.style.display = "none";
+//   }
+// }
+// function dropdown() {
+//   var x = document.getElementById("dropdown1-content");
+//   x.classList.toggle("show");
+// }
+function dropdown(container) {
+  var dropdownContent = container.querySelector("#dropdown1-content");
+  dropdownContent.style.display = "block";
+}
+
+function hideDropdown(container) {
+  var dropdownContent = container.querySelector("#dropdown1-content");
+  dropdownContent.style.display = "none";
+}
+

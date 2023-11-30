@@ -31,9 +31,18 @@
             </a>
           </h1>
           <ul>
-            <li><a href="#">Phone</a></li>
-            <li><a href="#">Smart Home</a></li>
-            <li><a href="#">Life Style</a></li>
+            <li>
+              <div class="dropdown-container" onmouseover="dropdown(this)" onmouseout="hideDropdown(this)">
+                <a class="dropdown1" href="#">Phone</a>
+                <ul id="dropdown1-content">
+                  <li>XIAOMI</li>
+                  <li>REDMI</li>
+                </ul>
+              </div>
+            </li>
+            
+            <li><a class="dropdown2" href="#">Smart Home</a></li>
+            <li><a class="dropdown3" href="#">Life Style</a></li>
           </ul>
         </div>
         <div class="nav-right">
