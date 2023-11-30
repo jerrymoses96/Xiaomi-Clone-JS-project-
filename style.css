@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+}
+body a {
+  text-decoration: none;
+}
+
+header {
+}
+
+header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  box-shadow: 0px 15px 10px -15px #111;
+}
+
+header .nav .nav-left {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+header .nav .nav-left .logo a {
+  width: 30px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+header .nav .nav-left .logo img {
+  width: 100%;
+  display: block;
+
+  transition: transform 0.3s ease;
+}
+header .nav .nav-left h1.logo a:hover img {
+  content: url("assests/logo/svgexport-2.svg");
+}
+
+header .nav .nav-left ul {
+  display: flex;
+  gap: 30px;
+}
+header .nav .nav-left ul li a {
+  position: relative;
+}
+header .nav .nav-left ul li a:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+
+  /* left: 25%;
+  right: 25%; */
+  bottom: -12px;
+  border: 1.5px solid darkorange;
+}
+header .nav .nav-right ul li a {
+  position: relative;
+}
+header .nav .nav-right ul li a:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+
+  bottom: -12px;
+  border: 1.5px solid darkorange;
+}
+header .nav .nav-right ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* carousel styling  */
+
+.carousal ul.dots li {
+  /* list-style: circle; */
+  margin-left: 20px;
+}
+.carousal {
+}
+
+.slider {
+  width: 1300px;
+  /* width: 1280px; */
+  max-width: 100vw;
+  /* height: 700px; */
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  transition: 0.5s;
+}
+
+.list {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  height: 100%;
+  display: flex;
+  width: max-content;
+  transition: 1s;
+}
+.list .item .content {
+  position: relative;
+  top: -300px;
+  left: 60%;
+  color: white;
+}
+.list .item .content1 {
+  position: relative;
+  top: -300px;
+  left: 80px;
+}
+.list .item h5 {
+  font-size: 30px;
+  font-weight: 500;
+}
+.list .item h6 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.list .item p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.list .item .content a {
+  display: inline-block;
+  margin-top: 40px;
+  color: white;
+
+  font-size: 12px;
+}
+.list .item .content1 a {
+  display: inline-block;
+  margin-top: 40px;
+  color: black;
+
+  font-size: 12px;
+}
+.list img {
+  width: 1300px;
+  max-width: 100vw;
+  /* height: 100%; */
+  object-fit: cover;
+}
+.buttons {
+  position: absolute;
+  top: 40%;
+  left: 1.5%;
+  width: 97%;
+  display: flex;
+  justify-content: space-between;
+}
+.buttons button {
+  width: 40px;
+  height: 40px;
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.308);
+  color: #fff;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+}
+.carousal button#pauseButton {
+  position: absolute;
+  top: 414px;
+  left: 813px;
+  height: 22px;
+  width: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: grey;
+  border-radius: 12px;
+  border: none;
+}
+
+.dots {
+  position: absolute;
+  bottom: 100px;
+  color: grey;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.dots li {
+  list-style: none;
+  width: 50px;
+  height: 2px;
+  background-color: grey;
+  /* margin: 20px; */
+  margin-bottom: 20px;
+  border-radius: 20px;
+  transition: 1s;
+}
+.dots li.active {
+  width: 100px;
+}
