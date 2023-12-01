@@ -118,23 +118,8 @@ pauseButton.addEventListener("click", function () {
   }
 });
 
-// dropdown function
+// ------Drop down functionality-------//
 
-// function dropdown() {
-//   var x = document.getElementById("dropdown1-content");
-//   console.log(x);
-//   if (x.style.display === "none") {
-//     console.log("r");
-//     x.style.display = "block";
-//   } else {
-//     console.log("d");
-//     x.style.display = "none";
-//   }
-// }
-// function dropdown() {
-//   var x = document.getElementById("dropdown1-content");
-//   x.classList.toggle("show");
-// }
 function dropdown(container) {
   var dropdownContent = container.querySelector("#dropdown1-content");
   dropdownContent.style.display = "block";
@@ -145,3 +130,33 @@ function hideDropdown(container) {
   dropdownContent.style.display = "none";
 }
 
+function dropdown2(container2) {
+  var dropdownContent2 = container2.querySelector("#dropdown2-content");
+  dropdownContent2.style.display = "block";
+}
+
+function hideDropdown2(container2) {
+  var dropdownContent2 = container2.querySelector("#dropdown2-content");
+  dropdownContent2.style.display = "none";
+}
+
+
+function dropdown3(container3) {
+  var dropdownContent3 = container3.querySelector("#dropdown3-content");
+  dropdownContent3.style.display = "block";
+}
+
+function hideDropdown3(container3) {
+  var dropdownContent3 = container3.querySelector("#dropdown3-content");
+  dropdownContent3.style.display = "none";
+}
+
+function dropdown4(container4) {
+  var dropdownContent4 = container4.querySelector("#dropdown4-content");
+  dropdownContent4.style.display = "block";
+}
+
+function hideDropdown4(container4) {
+  var dropdownContent4 = container4.querySelector("#dropdown4-content");
+  dropdownContent4.style.display = "none";
+}

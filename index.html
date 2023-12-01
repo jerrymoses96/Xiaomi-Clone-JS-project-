@@ -32,7 +32,11 @@
           </h1>
           <ul>
             <li>
-              <div class="dropdown-container" onmouseover="dropdown(this)" onmouseout="hideDropdown(this)">
+              <div
+                class="dropdown-container"
+                onmouseover="dropdown(this)"
+                onmouseout="hideDropdown(this)"
+              >
                 <a class="dropdown1" href="#">Phone</a>
                 <ul id="dropdown1-content">
                   <li>XIAOMI</li>
@@ -40,9 +44,35 @@
                 </ul>
               </div>
             </li>
-            
-            <li><a class="dropdown2" href="#">Smart Home</a></li>
-            <li><a class="dropdown3" href="#">Life Style</a></li>
+
+            <li>
+              <div
+                class="dropdown-container2"
+                onmouseover="dropdown2(this)"
+                onmouseout="hideDropdown2(this)"
+              >
+                <a class="dropdown2" href="#">Smart Home</a>
+                <div id="dropdown2-content">
+                  <img
+                    src="assests/images/Screenshot 2023-12-01 095356.png"
+                    alt="images"
+                  />
+                </div>
+              </div>
+            </li>
+            <div
+              class="dropdown-container3"
+              onmouseover="dropdown3(this)"
+              onmouseout="hideDropdown3(this)"
+            >
+              <li><a class="dropdown3" href="#">Life Style</a></li>
+              <div id="dropdown3-content">
+                <img
+                  src="assests/images/Screenshot 2023-12-01 102945 new.png"
+                  alt="images"
+                />
+              </div>
+            </div>
           </ul>
         </div>
         <div class="nav-right">
@@ -50,7 +80,18 @@
             <li><a href="#">Discover</a></li>
             <li><a href="#">Support</a></li>
             <li><i class="fa-solid fa-magnifying-glass"></i></li>
-            <li><i class="fa-solid fa-user"></i></li>
+            <li>
+              <div class="dropdown-container4"
+              onmouseover="dropdown4(this)"
+              onmouseout="hideDropdown4(this)">
+                <i class="fa-solid fa-user"></i>
+                <div id="dropdown4-content">
+                <p>Sign In</p>
+                <p>Sign Up</p>
+                </div>
+              </div>
+              
+            </li>
           </ul>
         </div>
       </div>
