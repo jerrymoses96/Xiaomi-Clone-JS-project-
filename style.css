@@ -359,6 +359,7 @@ header .nav .nav-left ul li ul#dropdown1-content li:last-child {
 
 .content .top-box .top-box-image {
   width: 60%;
+  overflow: hidden;
 }
 
 .content .top-box .top-box-image img {
@@ -383,7 +384,15 @@ header .nav .nav-left ul li ul#dropdown1-content li:last-child {
 .content .top-box .top-box-content p {
   font-size: 14px;
 }
-
+.but2 {
+  margin-top: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #111;
+  color: white;
+  font-size: 12px;
+  border: none;
+}
 .but1 {
   margin-top: 20px;
   padding: 5px 10px;
@@ -434,41 +443,21 @@ header .nav .nav-left ul li ul#dropdown1-content li:last-child {
   background-color: #fafafa;
 }
 
-.content .bottom-box .box2 .box2-img {
-}
+
 
 .content .bottom-box .box2 .box2-img img {
   width: 50%;
 }
 
-.content .bottom-box .box2 p {
-}
-
-.content .bottom-box .box2 span {
-}
-
-.content .bottom-box .box2 .but1 {
-}
 
 .content .bottom-box .box3 {
   width: 23%;
   background-color: #fafafa;
 }
 
-.content .bottom-box .box3 .box3-img {
-}
 
 .content .bottom-box .box3 .box3-img img {
   width: 50%;
-}
-
-.content .bottom-box .box3 p {
-}
-
-.content .bottom-box .box3 span {
-}
-
-.content .bottom-box .box3 .but1 {
 }
 
 .content .bottom-box .box4 {
@@ -476,18 +465,87 @@ header .nav .nav-left ul li ul#dropdown1-content li:last-child {
   background-color: #fafafa;
 }
 
-.content .bottom-box .box4 .box4-img {
-}
+
 
 .content .bottom-box .box4 .box4-img img {
   width: 50%;
 }
 
-.content .bottom-box .box4 p {
+
+
+/* ----hovering image effect---- */
+
+
+
+.box1-img,
+.box2-img,
+.box3-img,
+.box4-img {
+  transition: transform 0.3s ease-in-out;
 }
 
-.content .bottom-box .box4 span {
+.box1:hover .box1-img,
+.box2:hover .box2-img,
+.box3:hover .box3-img,
+.box4:hover .box4-img {
+  transform: scale(1.1);
 }
 
-.content .bottom-box .box4 .but1 {
+
+/* top box hover effect  */
+
+
+
+.top-box:hover .top-box-image img {
+  transform: scale(1.03);
+}
+.top-box-image img {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* button hovering effects  */
+
+
+.but1 {
+
+  opacity: 0;
+  transform: translatey(0px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.bottom-box .span {
+  transition: opacity 0.3s ease-in-out;
+}
+.box1:hover span,
+.box2:hover span,
+.box3:hover span,
+.box4:hover span {
+  opacity: 0;
+}
+
+.box1:hover .but1,
+.box2:hover .but1,
+.box3:hover .but1,
+.box4:hover .but1 {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(-50px);
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+  position: relative;
+  overflow: hidden;
+}
+
+.but2 {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  transform: translateY(40px);
+  transition: transform 0.3s ease-in-out;
+}
+.top-box:hover .but2 {
+  opacity: 1;
+  transform: translateY(0);
 }
