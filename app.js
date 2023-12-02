@@ -160,3 +160,33 @@ function hideDropdown4(container4) {
   var dropdownContent4 = container4.querySelector("#dropdown4-content");
   dropdownContent4.style.display = "none";
 }
+// tabs section functionality 
+
+function showTab(tabNumber) {
+  console.log('showTab called with tabNumber:', tabNumber);
+
+  // Hide all tabs
+  document.querySelectorAll('.content').forEach(function(tabContent) {
+    tabContent.classList.remove('active-tab');
+  });
+
+  // Show the selected tab
+  const selectedTab = document.getElementById('tab' + tabNumber);
+  if (selectedTab) {
+    selectedTab.classList.add('active-tab');
+  } else {
+    console.error('Tab not found for tabNumber:', tabNumber);
+  }
+
+  // Update button styles
+  document.querySelectorAll('.btn-box button').forEach(function(tabButton) {
+    tabButton.classList.remove('active');
+  });
+
+  const activeTabButton = document.getElementById('tabBtn' + tabNumber);
+  if (activeTabButton) {
+    activeTabButton.classList.add('active');
+  } else {
+    console.error('Button not found for tabNumber:', tabNumber);
+  }
+}
