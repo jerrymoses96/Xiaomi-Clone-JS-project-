@@ -140,7 +140,6 @@ function hideDropdown2(container2) {
   dropdownContent2.style.display = "none";
 }
 
-
 function dropdown3(container3) {
   var dropdownContent3 = container3.querySelector("#dropdown3-content");
   dropdownContent3.style.display = "block";
@@ -160,33 +159,47 @@ function hideDropdown4(container4) {
   var dropdownContent4 = container4.querySelector("#dropdown4-content");
   dropdownContent4.style.display = "none";
 }
-// tabs section functionality 
+// tabs section functionality
 
 function showTab(tabNumber) {
-  console.log('showTab called with tabNumber:', tabNumber);
+  console.log("showTab called with tabNumber:", tabNumber);
 
   // Hide all tabs
-  document.querySelectorAll('.content').forEach(function(tabContent) {
-    tabContent.classList.remove('active-tab');
+  document.querySelectorAll(".content").forEach(function (tabContent) {
+    tabContent.classList.remove("active-tab");
   });
 
   // Show the selected tab
-  const selectedTab = document.getElementById('tab' + tabNumber);
+  const selectedTab = document.getElementById("tab" + tabNumber);
   if (selectedTab) {
-    selectedTab.classList.add('active-tab');
+    selectedTab.classList.add("active-tab");
   } else {
-    console.error('Tab not found for tabNumber:', tabNumber);
+    console.error("Tab not found for tabNumber:", tabNumber);
   }
 
   // Update button styles
-  document.querySelectorAll('.btn-box button').forEach(function(tabButton) {
-    tabButton.classList.remove('active');
+  document.querySelectorAll(".btn-box button").forEach(function (tabButton) {
+    tabButton.classList.remove("active");
   });
 
-  const activeTabButton = document.getElementById('tabBtn' + tabNumber);
+  const activeTabButton = document.getElementById("tabBtn" + tabNumber);
   if (activeTabButton) {
-    activeTabButton.classList.add('active');
+    activeTabButton.classList.add("active");
   } else {
-    console.error('Button not found for tabNumber:', tabNumber);
+    console.error("Button not found for tabNumber:", tabNumber);
   }
 }
+
+// slider-2 functionality
+
+document.getElementById('next').onclick = function(){
+  let lists = document.querySelectorAll('.item');
+  document.getElementById('slide').appendChild(lists[0]);
+}
+document.getElementById('prev').onclick = function(){
+  let lists = document.querySelectorAll('.item');
+  document.getElementById('slide').prepend(lists[lists.length - 1]);
+}
+
+
+
