@@ -39,3 +39,32 @@ document.getElementById("slide").addEventListener("mouseout", function () {
   }, 4000); // Adjust the interval (in milliseconds) according to your preference
 });
 
+// modal funtionality 
+
+// Get the modal element
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var openBtn = document.getElementById("openModalBtn");
+
+// Get the button element to close the modal
+var closeBtn = document.getElementById("closeModalBtn");
+
+// When the user clicks the button, open the modal
+openBtn.onclick = function () {
+  modal.showModal();
+};
+
+// When the user clicks on the close button, close the modal
+closeBtn.onclick = function () {
+  modal.close();
+};
+
+// When the user clicks anywhere outside of the modal, close it
+modal.addEventListener("click", function (event) {
+  if (event.target === modal) {
+    modal.close();
+  }
+});
+
+

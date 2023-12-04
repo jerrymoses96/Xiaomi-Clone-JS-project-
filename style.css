@@ -11,6 +11,12 @@ body a {
 }
 
 /* ------header styling------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+}
 
 header .nav {
   display: flex;
@@ -80,7 +86,9 @@ header .nav .nav-right ul {
   align-items: center;
   justify-content: center;
 }
-
+header .nav .nav-right {
+  position: relative;
+}
 /*------dropdown styling--------*/
 
 header .nav .nav-left ul li ul#dropdown1-content {
@@ -164,6 +172,93 @@ header .nav .nav-left ul li ul#dropdown1-content li:last-child {
   border-bottom: 1px solid grey;
 }
 
+/* modal styling  */
+
+.search-container button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+dialog {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 30px 0;
+
+  position: absolute;
+  top: 150px;
+  left: 190px;
+}
+
+.modal-content {
+  position: relative;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Adjust the opacity as needed */
+  backdrop-filter: blur(8px); /* Adjust the blur intensity */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+#closeModalBtn {
+  font-size: 24px;
+  color: #333;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.modal-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.modal-content li {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button#searchButton {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
 /*-------carousel styling------*/
 
 .carousal ul.dots li {
@@ -301,6 +396,7 @@ header .nav .nav-left ul li ul#dropdown1-content li:last-child {
 }
 .tab-container {
   height: 950px;
+  margin-top: -100px;
 }
 
 .tab-container .hero {
@@ -674,13 +770,21 @@ header .nav .nav-left ul li ul#dropdown1-content li:last-child {
 .support-tabs .tab-1 {
   width: 220px;
 }
+.tab-1:hover,
+.tab-1:hover * {
+  color: orange;
+}
+
+.tab-1:hover span {
+  color: orange;
+}
+
 .support-tabs .tab-1 p {
   font-size: 20px;
   font-weight: 600;
 }
 .support-tabs .tab-1 span {
   font-size: 12px;
-  color: darkslategrey;
 }
 
 .footer {
