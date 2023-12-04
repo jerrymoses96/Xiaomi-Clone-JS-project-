@@ -1,11 +1,4 @@
-// document.getElementById('next-2').onclick = function(){
-//     let lists = document.querySelectorAll('.item2');
-//     document.getElementById('slide').appendChild(lists[0]);
-// }
-// document.getElementById('prev-2').onclick = function(){
-//     let lists = document.querySelectorAll('.item2');
-//     document.getElementById('slide').prepend(lists[lists.length - 1]);
-// }
+// slider-2 functionality
 
 // Function to move to the next slide
 function moveToNextSlide() {
@@ -45,3 +38,4 @@ document.getElementById("slide").addEventListener("mouseout", function () {
     moveToNextSlide();
   }, 4000); // Adjust the interval (in milliseconds) according to your preference
 });
+
