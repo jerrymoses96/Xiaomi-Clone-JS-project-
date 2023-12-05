@@ -150,15 +150,27 @@ function hideDropdown3(container3) {
   dropdownContent3.style.display = "none";
 }
 
+var hideTimeout;
+
 function dropdown4(container4) {
+  console.log("d");
   var dropdownContent4 = container4.querySelector("#dropdown4-content");
+  console.log(dropdownContent4);
+  clearTimeout(hideTimeout); // Clear any previous timeout
   dropdownContent4.style.display = "block";
 }
 
 function hideDropdown4(container4) {
+  console.log("c");
   var dropdownContent4 = container4.querySelector("#dropdown4-content");
-  dropdownContent4.style.display = "none";
+  console.log(dropdownContent4);
+
+  // Delay hiding the dropdown content to allow time to move the mouse to it
+  hideTimeout = setTimeout(function () {
+    dropdownContent4.style.display = "none";
+  }, 200); // Adjust the delay (in milliseconds) as needed
 }
+
 // tabs section functionality
 
 function showTab(tabNumber) {
@@ -189,10 +201,3 @@ function showTab(tabNumber) {
     console.error("Button not found for tabNumber:", tabNumber);
   }
 }
-
-
-
-
-
-
-
