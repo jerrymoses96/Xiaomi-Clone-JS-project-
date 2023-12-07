@@ -182,6 +182,7 @@ function showTab(tabNumber) {
   });
 
   // Show the selected tab
+  
   const selectedTab = document.getElementById("tab" + tabNumber);
   if (selectedTab) {
     selectedTab.classList.add("active-tab");
@@ -190,6 +191,7 @@ function showTab(tabNumber) {
   }
 
   // Update button styles
+
   document.querySelectorAll(".btn-box button").forEach(function (tabButton) {
     tabButton.classList.remove("active");
   });
