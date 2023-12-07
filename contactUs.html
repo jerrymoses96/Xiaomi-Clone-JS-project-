@@ -26,15 +26,9 @@
         <button type="submit" value="submit" class="btn">Submit</button>
       </form>
     </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
-      // var username = document.getElementById('name').value;
-      // var email = document.getElementById('email').value;
-      // var phone = document.getElementById('phone').value;
-      // console.log(username);
-
-      // var messageBody = "Name " + username + "<br/> Phone " + phone + "<br/> Email " + email;
-
       function emailSend() {
         Email.send({
           Host: "smtp.elasticemail.com",
@@ -50,7 +44,14 @@
             document.getElementById("email").value +
             "<br/> Phone: " +
             document.getElementById("phone").value,
-        }).then((message) => alert(message));
+        }).then(message => {
+          if(message=="OK"){
+            swal("Good job!", "Your details has been sent!", "success");
+          }
+          else{
+            swal("Ooops!", "Try again!", "error");
+          }
+        })
       }
     </script>
   </body>

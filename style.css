@@ -868,3 +868,15 @@ button#searchButton {
   align-items: center;
   gap: 10px;
 }
+.footer-top .but3 {
+  background-color: orange;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 12px;
+  width: 150px;
+  text-align: center;
+  padding: 10px 20px;
+  display: block;
+  margin-top: 20px;
+}

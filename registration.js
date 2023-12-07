@@ -1,9 +1,28 @@
+
+// function addData() {
+//   var username = document.getElementById("username").value;
+//   var pass = document.getElementById("pwd").value;
+
+//   // Adding data to local storage
+//   localStorage.setItem("userName", username);
+//   localStorage.setItem("userPwd", pass);
+// }
+
 function addData() {
-  var Username = document.getElementById("username").value;
+  var username = document.getElementById("username").value;
   var pass = document.getElementById("pwd").value;
 
-  //   adding data to local storage
+  // Retrieve existing data from local storage
+  var existingData = JSON.parse(localStorage.getItem("userData")) || [];
 
-  localStorage.userName = Username;
-  localStorage.userPwd = pass;
+  // Add new data to the array
+  var newData = {
+    userName: username,
+    userPwd: pass
+  };
+
+  existingData.push(newData);
+
+  // Save the updated array back to local storage
+  localStorage.setItem("userData", JSON.stringify(existingData));
 }
