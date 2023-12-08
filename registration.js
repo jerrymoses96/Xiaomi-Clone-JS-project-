@@ -1,12 +1,5 @@
 
-// function addData() {
-//   var username = document.getElementById("username").value;
-//   var pass = document.getElementById("pwd").value;
 
-//   // Adding data to local storage
-//   localStorage.setItem("userName", username);
-//   localStorage.setItem("userPwd", pass);
-// }
 
 function addData() {
   var username = document.getElementById("username").value;
